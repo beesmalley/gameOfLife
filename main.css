@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(16, 115, 146);
+}
+
+.content{
+    background-color: rgb(39, 184, 206);
+    border-radius: 10px;
+    border: 4px solid darkblue;
+    padding:10px;
+    margin:auto;
+    width:fit-content;
+    height:fit-content;
+}
+#links{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
