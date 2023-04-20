@@ -7,9 +7,25 @@
     <title>Login and Registration</title>
 </head>
 <body>
-    <div>
-        <form action="submit.php" method="post">
-            
+    <div id="forms">
+        <h1>Login</h1>
+        <form action="submit.php" method="post" class="form-inline">
+            <label for="username">Username:</label>
+            <input type="text" placeholder="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" placeholder="password" name="password">
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <h1>No Account? Register here!</h1>
+        <form action="submit.php" method="post" class="form-inline">
+            <label for="username">Username:</label>
+            <input type="text" placeholder="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" placeholder="password" name="password">
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
