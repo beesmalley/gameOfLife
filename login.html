@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Login and Registration</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <input type="text" placeholder="password" name="password">
             <button type="submit">Submit</button>
         </form>
-        <br>
+        <hr>
         <h1>No Account? Register here!</h1>
         <form action="submit.php" method="post" class="form-inline">
             <label for="username">Username:</label>
@@ -25,6 +26,8 @@
             <br>
             <label for="password">Password:</label>
             <input type="text" placeholder="password" name="password">
+            <label for="retry">Retype Password:</label>
+            <input type="text" placeholder="retype password" name="retry">
             <button type="submit">Submit</button>
         </form>
     </div>
