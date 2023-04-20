@@ -2,18 +2,16 @@
 
 session_start();
 $_SESSION["uname"]=$_POST["uname"];
-$file = file("userdata.txt")
+$file = file("userdata.txt");
 $found=false;
 
 for($i=0;$i<count($file);$i++){
     $personinfo=explode(",",$file[$i]);
     $username=trim($personinfo[0]);
     $password=trim($personinfo[1]);
-    if($username==$_POST["uname"]){
-        if($password==$_POST["pass"]){
-            $found=true;
-            break;
-        }
+    if($username==$_POST["uname"] && $password==$_POST["password"]){
+        $found=true;
+        break;
     }
 }
 
@@ -23,8 +21,7 @@ if(!$found){
     <br>
     </div>";
 }else{
-    header('gamepage.html')
-    }
-
+    header('Location: gamepage.html');
+}
 
 ?>
