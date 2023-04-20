@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(16, 115, 146);
+    background-image: url('R.gif');
 }
 
 .content{
@@ -15,12 +15,16 @@ body{
     text-align: center;
 }
 #forms{
-    padding:10px;
+    padding:15px;
     margin-right:auto;
     margin-left:auto;
-    background-color:blueviolet;
-    width:500px;
-    height:500px;
+    background-color:darkslategray;
+    color:lavender;
+    width:fit-content;
+}
+
+hr{
+    color:purple;
 }
 
 .content h1{
@@ -30,8 +34,8 @@ body{
 
 .form-inline {  
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
   }
   
   .form-inline label {
@@ -40,15 +44,15 @@ body{
   
   .form-inline input {
     vertical-align: middle;
-    margin: 5px 10px 5px 0;
     padding: 10px;
-    background-color: #fff;
+    background-color: lavenderblush;
     border: 1px solid #ddd;
   }
   
   .form-inline button {
+    margin-top:10px;
     padding: 10px 20px;
-    background-color: dodgerblue;
+    background-color: purple;
     border: 1px solid #ddd;
     color: white;
     cursor: pointer;
@@ -58,13 +62,3 @@ body{
     background-color: royalblue;
   }
   
-  @media (max-width: 800px) {
-    .form-inline input {
-      margin: 10px 0;
-    }
-    
-    .form-inline {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
