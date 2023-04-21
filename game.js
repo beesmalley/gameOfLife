@@ -68,23 +68,29 @@ function createGrid(rows, cols) {
   function updateCells() {
     const cells = grid.querySelectorAll(".cell");
     const cellArray = Array.from(cells);
-  
-    cellArray.forEach((cell, index) => {
+    
+    const newCellStates = cellArray.map((cell, index) => {
       const col = index % cols;
       const row = Math.floor(index / cols);
   
       const neighbors = getNeighbors(row, col, cellArray);
       const liveNeighbors = neighbors.filter((n) => n.getAttribute("data-status") === "alive");
-  
+    
       if (cell.getAttribute("data-status") === "alive") {
         if (liveNeighbors.length < 2 || liveNeighbors.length > 3) {
-          cell.setAttribute("data-status", "dead");
+          return "dead";
         }
       } else {
         if (liveNeighbors.length === 3) {
-          cell.setAttribute("data-status", "alive");
+          return "alive";
         }
       }
+  
+      return cell.getAttribute("data-status");
+    });
+  
+    cellArray.forEach((cell, index) => {
+      cell.setAttribute("data-status", newCellStates[index]);
     });
   }
 
