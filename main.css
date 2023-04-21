@@ -1,64 +1,71 @@
 body{
-    background-image: url('R.gif');
+  background-image: url('R.gif');
 }
 
 .content{
-    background-color: rgb(39, 184, 206);
-    border-radius: 10px;
-    border: 4px solid darkblue;
-    padding:10px;
-    margin:auto;
-    width:fit-content;
-    height:fit-content;
+  background-color: rgb(39, 184, 206);
+  border-radius: 10px;
+  border: 4px solid darkblue;
+  padding:10px;
+  margin:auto;
+  width:fit-content;
+  height:fit-content;
 }
 #links{
-    text-align: center;
+  text-align: center;
 }
 #forms{
-    padding:15px;
-    margin-right:auto;
-    margin-left:auto;
-    background-color:darkslategray;
-    color:lavender;
-    width:fit-content;
+  padding:15px;
+  margin-right:auto;
+  margin-left:auto;
+  background-color:darkslategray;
+  color:lavender;
+  width:fit-content;
 }
 
 hr{
-    color:purple;
+  color:purple;
 }
 
 .content h1{
-    text-align: center;
+  text-align: center;
 }
 
 
 .form-inline {  
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
   
-  .form-inline label {
-    margin: 5px 10px 5px 0;
-  }
-  
-  .form-inline input {
-    vertical-align: middle;
-    padding: 10px;
-    background-color: lavenderblush;
-    border: 1px solid #ddd;
-  }
-  
-  .form-inline button {
-    margin-top:10px;
-    padding: 10px 20px;
-    background-color: purple;
-    border: 1px solid #ddd;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .form-inline button:hover {
-    background-color: royalblue;
-  }
-  
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  padding: 10px;
+  background-color: lavenderblush;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  margin-top:10px;
+  padding: 10px 20px;
+  background-color: purple;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+
+#confirm{
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding:15px;
+  text-align: center;
+}

@@ -16,12 +16,10 @@ for($i=0;$i<count($file);$i++){
 }
 
 if(!$found){
-    echo "<div id=\"box\">
-    <p>Incorrect username or password.</p>
-    <br>
-    </div>";
+    $_SESSION["incorrect_message"] = "Username and Password do not match.";
+    header('Location: login.php');
 }else{
-    header('Location: gamepage.html');
+    header('Location: gamepage.php');
 }
 
 ?>

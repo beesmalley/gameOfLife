@@ -1,6 +1,6 @@
 <?php
  $file = file("userdata.txt");
- $newdata = $_POST["uname"] . "," . $_POST["password"] . "\n";
+ $newdata = $_POST["uname"] . "," . $_POST["password"] .",0". "\n";
  $name = $_POST["uname"];
  $found = false;
  
@@ -16,6 +16,8 @@
  
  if (!$found) {
      file_put_contents("userdata.txt", $newdata, FILE_APPEND);
-     header('Location: login.html');
+     session_start();
+     $_SESSION["confirm_message"] = "Account Successfully Created";
+     header('Location: login.php');
  }
     ?>
