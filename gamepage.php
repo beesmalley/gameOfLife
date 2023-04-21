@@ -1,7 +1,39 @@
 <?php
 session_start();
-if(!isset($_SESSION['score'])){
-    $_SESSION['score'] = time();
+if(isset($_POST['start'])) {
+    $start_time = time();
+  }
+  
+  if(isset($_POST['stop'])) {
+    $stop_time = time();
+    $newscore = $stop_time - $start_time;
+    $fp = fopen('userdata.txt','a+');
+    $path = 'userdata.txt';
+    if(file_exists($path)){
+        $contents = file($path);
+        foreach($contents as $value){
+            $personinfo=explode(",",$contents[$value]);
+            $username=trim($personinfo[0]);
+            $password=trim($personinfo[1]);
+            $score=trim($personinfo[2]);
+            if($username==$_SESSION["uname"]){
+                if($newscore>$score){
+                    $score = $newscore;
+                    break;
+                }
+            }
+        }
+        $userarr = array();
+        $scorearr = array();
+        foreach($contents as $value){
+            $personinfo=explode(",",$contents[$value]);
+            $userarr[$value] = $personinfo[0];
+            $scorearr[$value] =$personinfo[2];
+        }
+        $leaders = array_combine($userarr,$scorearr);
+        
+        $leaders = arsort($leaders);
+    }
 }
 
 ?>
@@ -26,8 +58,11 @@ if(!isset($_SESSION['score'])){
             </div>
         </div>
         <div id="buttonpanel">
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
+            <form method="POST">
+                <button name="start" type="submit">Start</button>
+                <button name="stop" type="submit">Stop</button>
+                <input type="text" name="result" value="">
+            </form>
             <button id="upOne">Increment 1 Generation</button>
             <button id="upMany">Increment 23 Generations</button>
             <button id="reset">Reset</button>
@@ -41,7 +76,7 @@ if(!isset($_SESSION['score'])){
         </div>
         
     </div>
-
+    
     <script src="game.js"></script>
 </body>
 </html>
