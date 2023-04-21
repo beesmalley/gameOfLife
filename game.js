@@ -184,5 +184,30 @@ function createGrid(rows, cols) {
     });
   }
 
+  function beaconPattern() {
+    const cells = grid.querySelectorAll(".cell");
+    const cellArray = Array.from(cells);
+    const middleRowIndex = Math.floor((20 - 4) / 2);
+    const middleColIndex = Math.floor((35 - 4) / 2);
+    const beaconIndexes = [
+      middleRowIndex * 35 + middleColIndex,
+      middleRowIndex * 35 + middleColIndex + 1,
+      (middleRowIndex + 1) * 35 + middleColIndex,
+      (middleRowIndex + 1) * 35 + middleColIndex + 1,
+      (middleRowIndex + 2) * 35 + middleColIndex + 2,
+      (middleRowIndex + 2) * 35 + middleColIndex + 3,
+      (middleRowIndex + 3) * 35 + middleColIndex + 2,
+      (middleRowIndex + 3) * 35 + middleColIndex + 3,
+    ];
+  
+    cellArray.forEach((cell, index) => {
+      if (beaconIndexes.includes(index)) {
+        cell.setAttribute("data-status", "alive");
+      } else {
+        cell.setAttribute("data-status", "dead");
+      }
+    });
+  }
+
 
 
