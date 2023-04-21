@@ -9,8 +9,10 @@ for($i=0;$i<count($file);$i++){
     $personinfo=explode(",",$file[$i]);
     $username=trim($personinfo[0]);
     $password=trim($personinfo[1]);
+    $score=trim($personinfo[2]);
     if($username==$_POST["uname"] && $password==$_POST["password"]){
         $found=true;
+        $_SESSION["score"]=$score;
         break;
     }
 }

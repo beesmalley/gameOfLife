@@ -24,16 +24,16 @@ session_start();
             </div>
         </div>
         <div id="buttonpanel">
-            <button>Start</button>
-            <button>Stop</button>
-            <button>Increment 1 Generation</button>
-            <button>Increment 23 Generations</button>
-            <button>Reset</button>
-            Animate:<select>
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="upOne">Increment 1 Generation</button>
+            <button id="upMany">Increment 23 Generations</button>
+            <button id="reset">Reset</button>
+            <select>
+                <option disabled selected>Animate</option>
+                <option>The Toad</option>
+                <option>The Beacon</option>
+                <option>The Pulsar</option>
             </select>
 
         </div>
