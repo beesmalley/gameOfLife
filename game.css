@@ -37,6 +37,13 @@ body{
     height: 30px;
     border: 1px solid black;
 }
+.cell:not([data-status="alive"]) {
+    background-color: gray;
+  }
+  
+  .cell[data-status="alive"] {
+    background-color: red;
+  }
 
 #buttonpanel{
     background-color: aliceblue;
