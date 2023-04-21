@@ -8,7 +8,6 @@
      $personinfo = explode(",", $file[$i]);
      $username = trim($personinfo[0]);
      $password = trim($personinfo[1]);
- 
      if ($username == $_POST["uname"] && $password == $_POST["pass"]) {
          $found = true;
          break;
