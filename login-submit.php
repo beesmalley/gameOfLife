@@ -18,7 +18,7 @@ for($i=0;$i<count($file);$i++){
 }
 
 if(!$found){
-    $_SESSION["incorrect_message"] = "Username and Password do not match.";
+    $_SESSION["incorrect_message"] = "Incorrect Username or Password.";
     header('Location: login.php');
 }else{
     header('Location: gamepage.php');

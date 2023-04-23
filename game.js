@@ -11,6 +11,7 @@ function resetGrid() {
     cells.forEach((cell) => {
       cell.setAttribute("data-status", "dead");
     });
+    clearInterval(intervalId);
   }
 
   const resetButton = document.getElementById("reset");
@@ -93,6 +94,8 @@ function createGrid(rows, cols) {
       cell.setAttribute("data-status", newCellStates[index]);
     });
   }
+
+  
 
   function getNeighbors(row, col, cellArray) {
     const neighbors = [];
