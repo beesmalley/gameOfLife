@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
     </div>
  
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="jquery.js"></script>
 <script>
     // Function to update the leaderboard
     function updateLeaderboard() {
