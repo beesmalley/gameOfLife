@@ -41,7 +41,6 @@ if(isset($_POST['stop']) || isset($_POST['reset'])) {
         // Unset the start time session variable
         unset($_SESSION['start_time']);
     }
-    
 }
 
 ?>
@@ -148,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setInterval(updateLeaderboard, 100);
 </script>
+
     <script src="game.js"></script>
 </body>
 </html>
